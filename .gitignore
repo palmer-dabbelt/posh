@@ -2,6 +2,8 @@
 *.o
 *.lo
 *.la
+*.log
+*.trs
 .dirstamp
 .deps/
 .libs/
@@ -22,3 +24,4 @@
 /m4/lt*
 /m4/libtool.m4
 /compile
+/test-driver

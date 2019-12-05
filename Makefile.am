@@ -7,6 +7,7 @@ bin_PROGRAMS = posh
 posh_SOURCES = posh.c++
 posh_LDADD = libposh.la @SQLITE3_LIBS@
 posh_CXXFLAGS = @SQLITE3_CFLAGS@
+posh_TESTS = test/posh/help.bash
 
 lib_LTLIBRARIES = libposh.la
 libposh_la_SOURCES = \
@@ -26,3 +27,6 @@ nobase_include_HEADERS = \
     libposh/database/connection.h++ \
     libposh/tty/display.h++ \
     libposh/tty/launch.h++
+
+TESTS = $(posh_TESTS)
+EXTRA_DIST = $(posh_TESTS)
