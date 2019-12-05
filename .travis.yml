@@ -1,0 +1,14 @@
+language: cpp
+os: linux
+dist: bionic
+compiler:
+  - gcc
+  - clang
+
+script:
+  - autoreconf -i
+  - ./configure --prefix=$(pwd)/install --enable-asan
+  - make all
+  - make install
+  - make check
+  - make distcheck
